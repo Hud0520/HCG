@@ -179,6 +179,7 @@ namespace Nhom21.Layout
             this.menuStrip3.Size = new System.Drawing.Size(178, 33);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
+            this.menuStrip3.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip3_ItemClicked);
             // 
             // trangChủToolStripMenuItem1
             // 

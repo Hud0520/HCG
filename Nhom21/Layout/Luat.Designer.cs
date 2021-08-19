@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Luat = new System.Windows.Forms.DataGridView();
-            this.MaLuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VeTrai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VePhai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaLuat = new System.Windows.Forms.TextBox();
             this.txt_VeTrai = new System.Windows.Forms.TextBox();
@@ -50,19 +47,15 @@
             // 
             this.dgv_Luat.AllowUserToAddRows = false;
             this.dgv_Luat.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Luat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Luat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Luat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Luat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaLuat,
-            this.VeTrai,
-            this.VePhai});
             this.dgv_Luat.Location = new System.Drawing.Point(56, 93);
             this.dgv_Luat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgv_Luat.Name = "dgv_Luat";
@@ -70,31 +63,6 @@
             this.dgv_Luat.Size = new System.Drawing.Size(475, 396);
             this.dgv_Luat.TabIndex = 0;
             this.dgv_Luat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Luat_CellClick);
-            // 
-            // MaLuat
-            // 
-            this.MaLuat.DataPropertyName = "maluat";
-            this.MaLuat.HeaderText = "Mã luật";
-            this.MaLuat.Name = "MaLuat";
-            this.MaLuat.ReadOnly = true;
-            this.MaLuat.Width = 90;
-            // 
-            // VeTrai
-            // 
-            this.VeTrai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.VeTrai.DataPropertyName = "vetrai";
-            this.VeTrai.HeaderText = "Vế trái";
-            this.VeTrai.Name = "VeTrai";
-            this.VeTrai.ReadOnly = true;
-            // 
-            // VePhai
-            // 
-            this.VePhai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.VePhai.DataPropertyName = "vephai";
-            this.VePhai.HeaderText = "Vế phải";
-            this.VePhai.Name = "VePhai";
-            this.VePhai.ReadOnly = true;
-            this.VePhai.Width = 88;
             // 
             // label1
             // 
@@ -254,8 +222,5 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VeTrai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VePhai;
     }
 }

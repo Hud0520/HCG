@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HAUI\\K6\\HCG\\BTL\\Nhom21\\Nhom21\\Nhom21.csproj": {}
+    "D:\\HAUI\\K6\\HCG\\BTL\\HCG\\Nhom21\\Nhom21.csproj": {}
   },
   "projects": {
-    "D:\\HAUI\\K6\\HCG\\BTL\\Nhom21\\Nhom21\\Nhom21.csproj": {
+    "D:\\HAUI\\K6\\HCG\\BTL\\HCG\\Nhom21\\Nhom21.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HAUI\\K6\\HCG\\BTL\\Nhom21\\Nhom21\\Nhom21.csproj",
+        "projectUniqueName": "D:\\HAUI\\K6\\HCG\\BTL\\HCG\\Nhom21\\Nhom21.csproj",
         "projectName": "Nhom21",
-        "projectPath": "D:\\HAUI\\K6\\HCG\\BTL\\Nhom21\\Nhom21\\Nhom21.csproj",
+        "projectPath": "D:\\HAUI\\K6\\HCG\\BTL\\HCG\\Nhom21\\Nhom21.csproj",
         "packagesPath": "C:\\Users\\hungd\\.nuget\\packages\\",
-        "outputPath": "D:\\HAUI\\K6\\HCG\\BTL\\Nhom21\\Nhom21\\obj\\",
+        "outputPath": "D:\\HAUI\\K6\\HCG\\BTL\\HCG\\Nhom21\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hungd\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -21,7 +21,6 @@ namespace Nhom21.Layout
 
         private void Main_Load(object sender, EventArgs e)
         {
-
             ChuanDoan fm = new ChuanDoan();
             AddForm(fm);
         }
@@ -73,6 +72,11 @@ namespace Nhom21.Layout
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

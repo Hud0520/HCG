@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GioiThieu));
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,11 +132,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, -1);
+            this.pictureBox1.ErrorImage = global::Nhom21.Properties.Resources.logo_haui_size;
+            this.pictureBox1.Image = global::Nhom21.Properties.Resources.logo_haui_size;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 22);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 98);
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
             // 
