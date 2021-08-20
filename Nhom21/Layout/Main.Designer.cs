@@ -85,7 +85,7 @@ namespace Nhom21.Layout
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip4.Size = new System.Drawing.Size(84, 33);
-            this.menuStrip4.TabIndex = 3;
+            this.menuStrip4.TabIndex = 4;
             this.menuStrip4.Text = "menuStrip4";
             // 
             // toolStripMenuItem1
@@ -106,7 +106,7 @@ namespace Nhom21.Layout
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(178, 33);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // trangChủToolStripMenuItem
@@ -126,7 +126,7 @@ namespace Nhom21.Layout
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip2.Size = new System.Drawing.Size(178, 33);
-            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // quảnLýToolStripMenuItem
@@ -177,7 +177,7 @@ namespace Nhom21.Layout
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip3.Size = new System.Drawing.Size(178, 33);
-            this.menuStrip3.TabIndex = 2;
+            this.menuStrip3.TabIndex = 1;
             this.menuStrip3.Text = "menuStrip3";
             this.menuStrip3.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip3_ItemClicked);
             // 
