@@ -34,10 +34,10 @@
             // 
             // rtb_CacBuocSuyDien
             // 
-            this.rtb_CacBuocSuyDien.Location = new System.Drawing.Point(13, 67);
+            this.rtb_CacBuocSuyDien.Location = new System.Drawing.Point(13, 43);
             this.rtb_CacBuocSuyDien.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.rtb_CacBuocSuyDien.Name = "rtb_CacBuocSuyDien";
-            this.rtb_CacBuocSuyDien.Size = new System.Drawing.Size(1006, 440);
+            this.rtb_CacBuocSuyDien.Size = new System.Drawing.Size(1006, 464);
             this.rtb_CacBuocSuyDien.TabIndex = 0;
             this.rtb_CacBuocSuyDien.Text = "";
             // 
@@ -45,12 +45,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(405, 11);
+            this.label1.Location = new System.Drawing.Point(404, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 29);
+            this.label1.Size = new System.Drawing.Size(223, 29);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Hệ thống suy diễn";
+            this.label1.Text = "Quá trình suy diễn";
             // 
             // CacBuocSuyDien
             // 

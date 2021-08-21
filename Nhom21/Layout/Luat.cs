@@ -15,7 +15,7 @@ namespace Nhom21.Layout
         EventControl ec = new EventControl();
         BindingList<Rule> list = null;
         List<Event> listEvent = null;
-        int row;
+        int row = -1;
         void load()
         {
             list = new BindingList<Rule>(rc.getAllRule());
@@ -40,7 +40,12 @@ namespace Nhom21.Layout
         {
             load();
         }
-
+        private void textBoxClear()
+        {
+            txt_MaLuat.Text = "";
+            txt_VePhai.Text = "";
+            txt_VeTrai.Text = "";
+        }
        
         private void dgv_Luat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -63,6 +68,7 @@ namespace Nhom21.Layout
                     rc.addRule(similar);
                     load();
                     dgv_Luat.FirstDisplayedScrollingRowIndex = list.Count - 1;
+                    textBoxClear();
                 }
                 else
                 {
@@ -99,10 +105,15 @@ namespace Nhom21.Layout
         {
             if (row >= 0 && row < list.Count)
             {
-                Rule similar = new Rule();
-                similar.id = list[row].id;
-                rc.delRule(similar);
-                load();
+                DialogResult dr = MessageBox.Show(null, "Bạn có chắc muốn xóa luật " + list[row].id + " : " + list[row].ToString(), "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Rule similar = new Rule();
+                    similar.id = list[row].id;
+                    rc.delRule(similar);
+                    load();
+                    textBoxClear();
+                }
             }
             else
             {
@@ -123,6 +134,7 @@ namespace Nhom21.Layout
                     rc.editRule(similar);
                     load();
                     dgv_Luat.FirstDisplayedScrollingRowIndex = row;
+                    textBoxClear();
                 }
                 else
                 {

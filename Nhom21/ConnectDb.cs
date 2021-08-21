@@ -3,19 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
+
 namespace Nhom21
 {
     class ConnectDb
     {
-        public static SqlConnection getC()
+        private String connectName;
+        public ConnectDb()
         {
-            String connectName = "Server=localhost;Database=HCG;Integrated Security=SSPI";
-            return new SqlConnection(connectName);
+            connectName = "Server=localhost;Database=HCG;Integrated Security=SSPI";
         }
-
-        static void main()
+        public SqlConnection getC()
         {
-            
+            SqlConnection cn = new SqlConnection(connectName);
+            try
+            {
+               
+                cn.Open();
+                cn.Close();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            return cn;
         }
     }
 }

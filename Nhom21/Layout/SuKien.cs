@@ -19,12 +19,25 @@ namespace Nhom21.Layout
     {
         EventControl ec = new EventControl();
         Event similar = null;
-        int row;
+        int row = -1;
         BindingList<Event> list = null;
         void load()
         {
             list = new BindingList<Event>(ec.getAllEvent());
             dgv_SuKien.DataSource = list;
+        }
+        private void textBoxClear()
+        {
+            txtThongTin.Text = "";
+            txt_TenSuKien.Text = "";
+            if (radioButton1.Checked)
+            {
+                radioButton1.Checked = false;
+            }
+            if (radioButton2.Checked)
+            {
+                radioButton2.Checked = false;
+            }
         }
         public SuKien()
         {
@@ -48,14 +61,15 @@ namespace Nhom21.Layout
             {
                 similar = new Event();
                 similar.id = radioButton1.Checked ? "r" : "e";
-                similar.name = txtThongTin.Text;
-                similar.info = txt_ThongTin.Text;
+                similar.name = txt_TenSuKien.Text;
+                similar.info = txtThongTin.Text;
                 ec.addEvent(similar);
                 load();
                 if (similar.id.Equals("r"))
                 {
                     dgv_SuKien.FirstDisplayedScrollingRowIndex = list.Count-1;
                 }
+                textBoxClear();
             }
             else
             {
@@ -67,7 +81,8 @@ namespace Nhom21.Layout
         {
             row = e.RowIndex;
             similar = list[row];
-            txtThongTin.Text = similar.name;
+            txt_TenSuKien.Text = similar.name;
+            txtThongTin.Text = similar.info;
             Regex gex = new Regex("^e");
             if (gex.IsMatch(similar.id))
             {
@@ -92,8 +107,8 @@ namespace Nhom21.Layout
                     if (similar.id.Contains(type))
                     {
                         
-                        similar.name = txtThongTin.Text;
-                        similar.info = txt_ThongTin.Text;
+                        similar.name = txt_TenSuKien.Text;
+                        similar.info = txtThongTin.Text;
                         ec.editEvent(similar);
                         load();
                         dgv_SuKien.FirstDisplayedScrollingRowIndex = row;
@@ -110,6 +125,7 @@ namespace Nhom21.Layout
                             radioButton2.Checked = true;
                         }
                     }
+                    textBoxClear();
                 }
                 else
                 {
@@ -123,13 +139,18 @@ namespace Nhom21.Layout
         {
             if (row >= 0 && row < list.Count)
             {
-                similar = new Event();
-                similar.id = list[row].id;
-                ec.delEvent(similar);
-                load();
-                if (similar.id.Equals("r"))
+                DialogResult dr = MessageBox.Show(null, "Bạn có chắc muốn xóa luật " + list[row].id , "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    dgv_SuKien.FirstDisplayedScrollingRowIndex = list.Count - 1;
+                    similar = new Event();
+                    similar.id = list[row].id;
+                    ec.delEvent(similar);
+                    load();
+                    if (similar.id.Equals("r"))
+                    {
+                        dgv_SuKien.FirstDisplayedScrollingRowIndex = list.Count - 1;
+                    }
+                    textBoxClear();
                 }
             }
         }

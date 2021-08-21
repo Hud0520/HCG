@@ -11,10 +11,11 @@ namespace Nhom21.Control
 {
     class EventControl
     {
-        public const string TYPE_EVENT = "e";
-        public const string TYPE_REVENT = "r";
-        private SqlConnection cn = ConnectDb.getC();
-
+        private SqlConnection cn ;
+        public EventControl()
+        {
+            cn = new ConnectDb().getC();
+        }
         public List<Event> getAllEvent()
         {
             List<Event> ls = new List<Event>();
@@ -71,6 +72,28 @@ namespace Nhom21.Control
                 }
                 rs.Close();
             }
+            cn.Close();
+            return ls;
+        }
+
+        public List<Event> getResult()
+        {
+            List<Event> ls = new List<Event>();
+            String sql = "SELECT * FROM tbl_eresult";
+            cn.Open();
+            using (SqlCommand cm = new SqlCommand(sql, cn))
+            {
+                SqlDataReader rs = cm.ExecuteReader();
+                while (rs.Read())
+                {
+                    Event e = new Event();
+                    e.id = "r" + rs.GetInt32(0);
+                    e.name = rs.GetString(1);
+                    ls.Add(e);
+                }
+                rs.Close();
+            }
+            cn.Close();
             return ls;
         }
 

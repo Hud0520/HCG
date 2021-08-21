@@ -11,7 +11,11 @@ namespace Nhom21.Control
 {
     class RuleControl
     {
-        private SqlConnection cn = ConnectDb.getC();
+        private SqlConnection cn ;
+        public RuleControl()
+        {
+            cn = new ConnectDb().getC();
+        }
 
         public List<Object.Rule> getAllRule()
         {
@@ -27,7 +31,7 @@ namespace Nhom21.Control
                     Object.Rule r = new Object.Rule();
                     r.id = "R" + rs.GetInt32(0);
                     r.left = rs.GetString(1);
-                    r.right = "r"+rs.GetInt32(2);
+                    r.right = rs.GetString(2);
                     ls.Add(r);
                 }
                 rs.Close();
@@ -48,7 +52,7 @@ namespace Nhom21.Control
                 using (SqlCommand cm = new SqlCommand(sql, cn))
                 {
                     cm.Parameters.Add("@vt", SqlDbType.NVarChar).Value = similar.left;
-                    cm.Parameters.Add("@vp", SqlDbType.Int).Value = similar.right.Substring(1);
+                    cm.Parameters.Add("@vp", SqlDbType.NVarChar).Value = similar.right;
                     cm.ExecuteNonQuery();
                 }
 
@@ -67,7 +71,7 @@ namespace Nhom21.Control
                 {
                     cm.Parameters.Add("@id", SqlDbType.Int).Value = similar.id.Substring(1);
                     cm.Parameters.Add("@vt", SqlDbType.NVarChar).Value = similar.left;
-                    cm.Parameters.Add("@vp", SqlDbType.Int).Value = similar.right.Substring(1);
+                    cm.Parameters.Add("@vp", SqlDbType.NVarChar).Value = similar.right;
                     cm.ExecuteNonQuery();
                 }
 

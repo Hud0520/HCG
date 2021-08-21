@@ -9,5 +9,11 @@ namespace Nhom21.Object
         public String id { get; set; }
         public String left { get; set; }
         public String right { get; set; }
+
+        override
+        public string ToString()
+        {
+            return this.left + " --> " + this.right;
+        }
     }
 }

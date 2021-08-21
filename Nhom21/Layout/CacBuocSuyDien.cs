@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Nhom21.Object;
 
 namespace Nhom21.Layout
 {
@@ -21,7 +22,7 @@ namespace Nhom21.Layout
 
         private void frm_CacBuocSuyDien_Load(object sender, EventArgs e)
         {
-    
+            rtb_CacBuocSuyDien.Text = FileLog.readfile();
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)

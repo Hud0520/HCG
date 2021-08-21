@@ -165,7 +165,7 @@ namespace Nhom21.Layout
             this.hệThốngSuyDiễnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.hệThốngSuyDiễnToolStripMenuItem.Name = "hệThốngSuyDiễnToolStripMenuItem";
             this.hệThốngSuyDiễnToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
-            this.hệThốngSuyDiễnToolStripMenuItem.Text = "Hệ Thống suy diễn";
+            this.hệThốngSuyDiễnToolStripMenuItem.Text = "Quá trình suy diễn";
             this.hệThốngSuyDiễnToolStripMenuItem.Click += new System.EventHandler(this.hệThốngSuyDiễnToolStripMenuItem_Click);
             // 
             // menuStrip3

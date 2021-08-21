@@ -254,7 +254,6 @@
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.TextBox txt_ThongTin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

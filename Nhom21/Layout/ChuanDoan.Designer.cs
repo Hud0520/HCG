@@ -62,7 +62,6 @@
             this.dgv_SuKien.Size = new System.Drawing.Size(409, 352);
             this.dgv_SuKien.TabIndex = 1;
             this.dgv_SuKien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SuKien_CellClick);
-            this.dgv_SuKien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SuKien_CellContentClick);
             // 
             // dgv_XacNhanSuKien
             // 
@@ -129,7 +128,7 @@
             this.listbox_KetQua.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listbox_KetQua.Size = new System.Drawing.Size(385, 124);
             this.listbox_KetQua.TabIndex = 6;
-            this.listbox_KetQua.SelectedIndexChanged += new System.EventHandler(this.listbox_KetQua_SelectedIndexChanged);
+            this.listbox_KetQua.Click += new System.EventHandler(this.btn_CacBuocSuyDien_Click);
             // 
             // picturebox_KetQua
             // 
@@ -191,7 +190,7 @@
             this.btn_Refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(141, 55);
-            this.btn_Refresh.TabIndex = 16;
+            this.btn_Refresh.TabIndex = 6;
             this.btn_Refresh.Text = "Reset";
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
