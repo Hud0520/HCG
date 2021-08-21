@@ -57,7 +57,7 @@ namespace Nhom21.Layout
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            if(!"".Equals(txtThongTin.Text) &&(radioButton1.Checked || radioButton2.Checked))
+            if(!"".Equals(txt_TenSuKien.Text) &&(radioButton1.Checked || radioButton2.Checked))
             {
                 similar = new Event();
                 similar.id = radioButton1.Checked ? "r" : "e";
@@ -100,7 +100,7 @@ namespace Nhom21.Layout
             {
                 similar = new Event();
                 similar.id = list[row].id;
-                if (!"".Equals(txtThongTin.Text) && (radioButton1.Checked || radioButton2.Checked))
+                if (!"".Equals(txt_TenSuKien.Text) && (radioButton1.Checked || radioButton2.Checked))
                 {
                     
                     String type = radioButton1.Checked ? "r" : "e";
@@ -139,7 +139,7 @@ namespace Nhom21.Layout
         {
             if (row >= 0 && row < list.Count)
             {
-                DialogResult dr = MessageBox.Show(null, "Bạn có chắc muốn xóa luật " + list[row].id , "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show(null, "Bạn có chắc muốn xóa sự kiện " + list[row].id , "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
                     similar = new Event();
